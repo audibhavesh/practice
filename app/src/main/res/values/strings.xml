@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">practice</string>
+    <string name="tiitlename">Text</string>
+    <string name="descri">TextView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="heart">heart</string>
+    <string name="todo" />
+    <string name="heartintro">"The heart is a muscular organ in most animals, which pumps blood through the blood vessels of the circulatory system."
+        "\nBlood provides the body with oxygen and nutrients, as well as assists in the removal of metabolic wastes."
+        "\nIn humans, the heart is located between the lungs, in the middle compartment of the chest."
+        "\n\The human heart is hollow,mascular organ.It is roughly of size of one's clenched fist(12 X 9 cm)."
+        "\nAverage weight is about 300 gm in males and about 250 gm in females"</string>
+    <string name="title_activity_openlistactivity">openlistactivity</string>
+</resources>
