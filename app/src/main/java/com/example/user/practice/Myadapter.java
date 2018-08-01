@@ -29,6 +29,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
     Context context2;
     FragmentManager manager;
     int img[];
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
@@ -36,28 +37,51 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
         return new ViewHolder(v);
     }
 
-    public Myadapter(Context context, String[] medli,int[] img) {
+    public Myadapter(Context context, String[] medli, int[] img) {
         this.context = context;
         this.medli = medli;
-        this.img=img;
+        this.img = img;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.t.setText(medli[position]);
         holder.img.setImageResource(img[position]);
-        final String TAG = "MyActivity";
 
         holder.l.setOnClickListener(new View.OnClickListener() {
             Intent intent;
+
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "you clicked " + medli[position], Toast.LENGTH_SHORT).show();
-                switch (position){
+                intent = new Intent(context, seconlist.class);
+                switch (position) {
+                    case 0:
+                        intent.putExtra("key", 0);
+                        break;
+                    case 1:
+                        intent.putExtra("key", 1);
+                        break;
+                    case 2:
+                        intent.putExtra("key", 2);
+                        break;
+                    case 3:
+                        intent.putExtra("key", 3);
+                        break;
                     case 4:
-                        intent=new Intent(context,seconlist.class);
-                        context.startActivity(intent);
+                        intent.putExtra("key", 4);
+                        break;
+                    case 5:
+                        intent.putExtra("key", 5);
+                        break;
+                    case 6:
+                        intent.putExtra("key", 6);
+                        break;
+                    case 7:
+                        intent.putExtra("key", 7);
+                        break;
                 }
+                context.startActivity(intent);
             }
         });
     }
@@ -71,12 +95,13 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
         TextView t;
         LinearLayout l;
         ImageView img;
+
         public ViewHolder(View itemView) {
 
             super(itemView);
             t = (TextView) itemView.findViewById(R.id.title);
             l = (LinearLayout) itemView.findViewById(R.id.linear);
-            img=(ImageView)itemView.findViewById(R.id.img);
+            img = (ImageView) itemView.findViewById(R.id.img);
 //            itemView.setClickable(true);
         }
 

@@ -47,7 +47,10 @@ public class Myadapter2 extends RecyclerView.Adapter<Myadapter2.ViewHolder> {
                         intent=new Intent(context,openlistactivity.class);
                         context.startActivity(intent);
 
-
+//                    case 1:
+//                        intent=new Intent(context,openlistactivity.class);
+//                        intent.putExtra("internal","");
+//                        context.startActivity(intent);
                 }
             }
         });
