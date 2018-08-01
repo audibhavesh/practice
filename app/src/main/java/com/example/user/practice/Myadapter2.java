@@ -42,16 +42,17 @@ public class Myadapter2 extends RecyclerView.Adapter<Myadapter2.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "you clicked " + medli2[position], Toast.LENGTH_SHORT).show();
+                intent=new Intent(context,openlistactivity.class);
                 switch (position){
                     case 0:
-                        intent=new Intent(context,openlistactivity.class);
-                        context.startActivity(intent);
+                        intent.putExtra("key",0);
+                        break;
 
-//                    case 1:
-//                        intent=new Intent(context,openlistactivity.class);
-//                        intent.putExtra("internal","");
-//                        context.startActivity(intent);
+                    case 1:
+                        intent.putExtra("key",1);
+                        break;
                 }
+                context.startActivity(intent);
             }
         });
 }
